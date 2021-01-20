@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "Enemy.h"
 
+Enemy::Enemy(const char* name, float health, float damage, float defense) {}
+
 float Enemy::attack(Character* other)
 {
     /* initialize random seed: */

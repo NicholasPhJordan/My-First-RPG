@@ -1,4 +1,8 @@
-#include "Player.h";
+#include "Player.h"
+#include <time.h>
+#include <stdlib.h>
+
+Player::Player(const char*name, float health, float damage, float defense) {}
 
 float Player::takeDamage(float damage)
 {

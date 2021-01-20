@@ -30,7 +30,7 @@ int printOptions(const char* context, const char* option1, const char* option2)
 		if (input != 1 && input != 2)
 		{
 			//If the player did not input something valid, print an error and clear the screen.
-			std::cout << "Invalid Input. Try Again";
+			std::cout << "Invalid Input. Try Again" << std::endl;
 			system("pause");
 			system("cls");
 		}
@@ -91,7 +91,10 @@ int startPlayerBattle(Player* player, Character* enemy)
 		system("pause");
 	}
 
-	return player->getHealth() > 0;
+	if (player->getHealth() > 0)
+		return 1;
+	else
+		return 0;
 }
 
 int main()
@@ -106,7 +109,7 @@ int main()
 
 	//Gets player weapon choice and equips the choosen weapon.
 	int choice = printOptions("Pick an Item: ", "Sword", "Shield");
-	if (choice = 1)
+	if (choice == 1)
 		player->equipWeapon(Item(10));
 	else if (choice == 2)
 		player->equipShield(Item(10));
