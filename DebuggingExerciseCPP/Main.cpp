@@ -118,17 +118,20 @@ int main()
 	Enemy* enemy = new Enemy("Monster", 50, 10, 5);
 	
 	//Start battle with enemy and player and record the result.
-	int result = startPlayerBattle(player, enemy);
+ 	int result = startPlayerBattle(player, enemy);
 
 	//Based on the result of the battle, display the proper end game message.
 	switch (result)
 	{
 	case 0:
 		std::cout << "You Lose!!" << std::endl;
+		break;
 	case 1:
 		std::cout << "You Win!!" << std::endl;
+		break;
 	case 2:
 		std::cout << "You Escaped....." << std::endl;
+		break;
 	}
 	system("pause");
 }

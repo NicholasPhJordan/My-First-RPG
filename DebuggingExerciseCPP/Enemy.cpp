@@ -2,7 +2,13 @@
 #include <stdlib.h>
 #include "Enemy.h"
 
-Enemy::Enemy(const char* name, float health, float damage, float defense) {}
+Enemy::Enemy(const char* name, float health, float damage, float defense) 
+{
+    m_name = name;
+    m_health = health;
+    m_damage = damage;
+    m_defense = defense;
+}
 
 float Enemy::attack(Character* other)
 {

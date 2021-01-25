@@ -28,7 +28,7 @@ public:
 	virtual float getDamage() { return m_damage; }
 	virtual float getDefense() { return m_defense; }
 
-private:
+protected:
 	const char* m_name = new char();
 	float m_health = 0;
 	float m_damage = 0;

@@ -2,13 +2,19 @@
 #include <time.h>
 #include <stdlib.h>
 
-Player::Player(const char*name, float health, float damage, float defense) {}
+Player::Player(const char*name, float health, float damage, float defense) 
+{
+    m_name = name;
+    m_health = health;
+    m_damage = damage;
+    m_defense = defense;
+}
 
 float Player::takeDamage(float damage)
 {
     float totalDamage = damage - m_shield.getStatusBoost();
 
-    return takeDamage(damage);
+    return takeDamage(totalDamage);
 }
 
 float Player::attack(Character* other)
